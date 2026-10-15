@@ -1,0 +1,10 @@
+[agent]
+# model = "google-gla:gemini-3.8-flash"
+# model = "ollama:granite4:3b"
+# model = "ollama:qwen2.5:1.5b-instruct"
+# model = "ollama:qwen3:4b-instruct"
+model = "groq:qwen/qwen3.8-27b"
+# model = "groq:openai/gpt-oss-120b"  # Alternativa de 120B si la de arriba falla
+harness = "pydanticai"
+sandbox = "local"
+timeout=60
