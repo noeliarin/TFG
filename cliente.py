@@ -60,7 +60,7 @@ def _enviar(prompt: str, sesion: str):
     url = f"{BASE_URL}/agents/{AGENT}/{sesion}"
     try:
         t0 = time.time()
-        r  = requests.post(url, json={"prompt": prompt}, timeout=120)
+        r  = requests.post(url, json={"prompt": prompt}, timeout=300)
         dt = round(time.time() - t0, 1)
 
         if r.status_code == 200:

@@ -14,8 +14,9 @@ This skill handles tasks related to generating e-commerce product recommendation
 - To rank a list of Amazon products based on user preferences.
 
 ## Current limitations
-- The client supplies the user history and product catalog in the request. Use only those data and do not query external sources.
-- If explanation is explicitly requested, use the `explainability` skill INSTEAD or AFTER generating the recommendation.
+- **Catálogo cerrado estricto:** El agente SOLO puede recomendar productos existentes en `db_items.json`. Está TERMINANTEMENTE PROHIBIDO inventar o recomendar marcas y modelos que no estén en la base de datos (por ejemplo, inventar Sennheiser, Sony o Audio-Technica si no existen en los resultados de las herramientas).
+- Si no hay productos del tipo pedido en el catálogo, comunícaselo honestamente al usuario y pregúntale si prefiere explorar categorías relacionadas que sí estén disponibles.
+- Si se requiere explicación, apóyate en la skill `explainability`.
 
 ## Mandatory Preconditions
 First, use the user's interaction history (obtained via `explore-users`) to infer their preferences, favorite categories, and needs. ONLY ask the user for more details if their history is empty or you cannot infer what they might like.

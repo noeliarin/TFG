@@ -1,0 +1,159 @@
+18:03:16 | INFO  | ============================================================
+18:03:16 | INFO  | 📩 NUEVA PETICIÓN | sesión=chat_84c9b521
+18:03:16 | INFO  |    Prompt: Soy el usuario AGCI7FAH4GL5FI65HYLKWTMFZ2CQ. ¿Tienes algún amplificador para mi teclado o directo?
+18:03:16 | INFO  | ============================================================
+18:03:18 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:03:18 | INFO  | 🔧 TOOL CALL: get_user_history(user_id='AGCI7FAH4GL5FI65HYLKWTMFZ2CQ')
+18:03:18 | INFO  | 🔧 TOOL CALL: list_item_titles(limit=10)
+18:03:18 | INFO  |   ✅ Usuario encontrado: 2 items en historial (0.001s)
+18:03:18 | INFO  |   ✅ Devueltos 10 items (0.004s)
+18:03:19 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:03:19 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B0040FJ27S')
+18:03:19 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B06XP6TDVY')
+18:03:19 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='keyboard amplifier', max_results=4)
+18:03:20 | INFO  |   ✅ Item encontrado: 'Korg SV-1BK 73-Key Stage Vintage Piano -' (0.014s)
+18:03:20 | INFO  |   ✅ Item encontrado: 'LEDwholesalers 12-Volt 16.4-ft RGB Color' (0.017s)
+18:03:20 | INFO  |   ⚠ Sin resultados para 'keyboard amplifier' (probado también: 'keyboard amplifier') (0.022s)
+18:03:20 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='amplifier', max_results=4)
+18:03:20 | INFO  |   ✅ 4 resultados para 'amplifier': ['B002EEP8F2', 'B006O64JMY', 'B085ZS2G6N', 'B096VQX78F'] (0.008s)
+18:03:20 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:03:20 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='piano amp', max_results=4)
+18:03:20 | INFO  |   ⚠ Sin resultados para 'piano amp' (probado también: 'piano amp') (0.009s)
+18:03:20 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='keyboard amp', max_results=4)
+18:03:20 | INFO  |   ⚠ Sin resultados para 'keyboard amp' (probado también: 'keyboard amp') (0.013s)
+18:03:20 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:03:20 | INFO  | Retrying request to /openai/v1/chat/completions in 26.000000 seconds
+18:03:48 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:03:48 | INFO  | ✅ RESPUESTA GENERADA | 32.1s | 1649 chars
+18:03:48 | INFO  | ============================================================
+
+18:05:14 | INFO  | ============================================================
+18:05:14 | INFO  | 📩 NUEVA PETICIÓN | sesión=chat_84c9b521
+18:05:14 | INFO  |    Prompt: Toco directo a mesa/PA, pero necesito un soporte o algún accesorio para el escenario
+18:05:14 | INFO  | ============================================================
+18:05:15 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:05:15 | INFO  | 🔧 TOOL CALL: get_user_history(user_id='AGCI7FAH4GL5FI65HYLKWTMFZ2CQ')
+18:05:15 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='keyboard stand', max_results=4)
+18:05:15 | INFO  |   ✅ Usuario encontrado: 2 items en historial (0.001s)
+18:05:15 | INFO  |   ⚠ Sin resultados para 'keyboard stand' (probado también: 'keyboard stand') (0.004s)
+18:05:16 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:05:16 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B0040FJ27S')
+18:05:16 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B06XP6TDVY')
+18:05:16 | INFO  | 🔧 TOOL CALL: list_item_titles(limit=10)
+18:05:16 | INFO  |   ✅ Item encontrado: 'LEDwholesalers 12-Volt 16.4-ft RGB Color' (0.008s)
+18:05:16 | INFO  |   ✅ Item encontrado: 'Korg SV-1BK 73-Key Stage Vintage Piano -' (0.015s)
+18:05:16 | INFO  |   ✅ Devueltos 10 items (0.019s)
+18:05:16 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:05:16 | INFO  | Retrying request to /openai/v1/chat/completions in 8.000000 seconds
+18:05:25 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:05:25 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='stand', max_results=4)
+18:05:25 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='stage', max_results=4)
+18:05:25 | INFO  |   ✅ 4 resultados para 'stand': ['B000S5JGMU', 'B0B89ZSYS7', 'B00HXKFQLI', 'B0891SBM1L'] (0.002s)
+18:05:25 | INFO  |   ✅ 4 resultados para 'stage': ['B00B2HLWZW', 'B0891SBM1L', 'B002EEP8F2', 'B06W2NS817'] (0.003s)
+18:05:25 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:05:25 | INFO  | Retrying request to /openai/v1/chat/completions in 30.000000 seconds
+18:05:56 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:05:56 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='pedal', max_results=4)
+18:05:56 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='sustain', max_results=4)
+18:05:56 | INFO  |   ✅ 3 resultados para 'pedal': ['B085ZS2G6N', 'B079LPYXN8', 'B06XP6TDVY'] (0.007s)
+18:05:56 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B06W2NS817')
+18:05:56 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B0891SBM1L')
+18:05:56 | INFO  |   ✅ Item encontrado: 'On-Stage MY570 Clamp-On Universal Access' (0.009s)
+18:05:56 | INFO  |   ✅ Item encontrado: 'Fender Classic Series Case Stand, 3-Guit' (0.008s)
+18:05:56 | INFO  |   ⚠ Sin resultados para 'sustain' (probado también: 'sustain') (0.026s)
+18:05:56 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:05:56 | INFO  | Retrying request to /openai/v1/chat/completions in 34.000000 seconds
+18:06:31 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:06:31 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='bass', max_results=4)
+18:06:31 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='case', max_results=4)
+18:06:31 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='strap', max_results=4)
+18:06:31 | INFO  |   ✅ 4 resultados para 'case': ['B0891SBM1L', 'B006O64JMY', 'B07W7B8LDN', 'B076F695R3'] (0.006s)
+18:06:31 | INFO  |   ✅ 4 resultados para 'bass': ['B0891SBM1L', 'B01HY530RS', 'B006O64JMY', 'B0B8M5FJ9W'] (0.014s)
+18:06:31 | INFO  |   ✅ 4 resultados para 'strap': ['B006O64JMY', 'B00O2C61W8', 'B0B8M5FJ9W', 'B07D345CH8'] (0.015s)
+18:06:32 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:06:32 | INFO  | Retrying request to /openai/v1/chat/completions in 39.000000 seconds
+18:07:11 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:07:11 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B076F695R3')
+18:07:11 | INFO  |   ✅ Item encontrado: 'NKTM Piano Keyboard Cover, 88 Key Keyboa' (0.003s)
+18:07:12 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:07:12 | INFO  | Retrying request to /openai/v1/chat/completions in 41.000000 seconds
+18:07:55 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:07:55 | INFO  | ✅ RESPUESTA GENERADA | 160.9s | 1988 chars
+18:07:55 | INFO  | ============================================================
+
+18:11:10 | INFO  | ============================================================
+18:11:10 | INFO  | 📩 NUEVA PETICIÓN | sesión=chat_2566e90a
+18:11:10 | INFO  |    Prompt: Soy el usuario AGCI7FAH4GL5FI65HYLKWTMFZ2CQ. ¿Qué cables o accesorios de conexión tienes para mi equipo?
+18:11:10 | INFO  | ============================================================
+18:11:12 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:11:12 | INFO  | 🔧 TOOL CALL: get_user_history(user_id='AGCI7FAH4GL5FI65HYLKWTMFZ2CQ')
+18:11:12 | INFO  |   ✅ Usuario encontrado: 2 items en historial (0.001s)
+18:11:13 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:11:13 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='MIDI cable', max_results=4)
+18:11:14 | INFO  |   ⚠ Sin resultados para 'MIDI cable' (probado también: 'midi cable') (0.005s)
+18:11:14 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='piano sustain pedal', max_results=4)
+18:11:14 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='audio cable', max_results=4)
+18:11:14 | INFO  |   ⚠ Sin resultados para 'piano sustain pedal' (probado también: 'piano sustain pedal') (0.008s)
+18:11:14 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='5 pin', max_results=4)
+18:11:14 | INFO  |   ⚠ Sin resultados para 'audio cable' (probado también: 'audio cable') (0.01s)
+18:11:14 | INFO  |   ⚠ Sin resultados para '5 pin' (probado también: '5 pin') (0.016s)
+18:11:14 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:11:14 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='adapter', max_results=4)
+18:11:14 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='cable', max_results=4)
+18:11:14 | INFO  | 🔧 TOOL CALL: list_item_titles(limit=10)
+18:11:14 | INFO  |   ✅ 4 resultados para 'cable': ['B00FYK67FI', 'B0B8M5FJ9W', 'B06W2NS817', 'B09ZYG6KLY'] (0.006s)
+18:11:14 | INFO  |   ✅ 4 resultados para 'adapter': ['B00FYK67FI', 'B09ZYG6KLY', 'B09YYF4X1Y', 'B07G469YLS'] (0.011s)
+18:11:14 | INFO  |   ✅ Devueltos 10 items (0.016s)
+18:11:14 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:11:14 | INFO  | Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+18:11:34 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:11:34 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B07G469YLS')
+18:11:34 | INFO  |   ✅ Item encontrado: '19.7 Foot/6M XLR to Lightning Cable, Sar' (0.005s)
+18:11:34 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:11:34 | INFO  | Retrying request to /openai/v1/chat/completions in 27.000000 seconds
+18:12:02 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:12:02 | INFO  | ✅ RESPUESTA GENERADA | 51.8s | 1429 chars
+18:12:02 | INFO  | ============================================================
+
+18:14:04 | INFO  | ============================================================
+18:14:04 | INFO  | 📩 NUEVA PETICIÓN | sesión=chat_2566e90a
+18:14:04 | INFO  |    Prompt: ¿Tienes cables de audio tipo jack para conectar el teclado a una mesa?
+18:14:04 | INFO  | ============================================================
+18:14:06 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:14:06 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='jack cable', max_results=4)
+18:14:06 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='audio cable', max_results=4)
+18:14:06 | INFO  |   ✅ 2 resultados para 'jack cable': ['B008I5QVB6', 'B08Q7HQHNX'] (0.004s)
+18:14:06 | INFO  |   ✅ 2 resultados para 'audio cable': ['B08Q7HQHNX', 'B07S6MKF6K'] (0.007s)
+18:14:06 | INFO  | 🔧 TOOL CALL: get_user_history(user_id='AGCI7FAH4GL5FI65HYLKWTMFZ2CQ')
+18:14:06 | INFO  |   ✅ Usuario encontrado: 2 items en historial (0.001s)
+18:14:07 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:14:07 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B08Q7HQHNX')
+18:14:07 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B008I5QVB6')
+18:14:07 | INFO  |   ✅ Item encontrado: 'Elebase 1/4 Inch TRS Instrument Cable 10' (0.007s)
+18:14:07 | INFO  |   ✅ Item encontrado: 'Stellar Labs Cable, 3Pos XLR Plug-Jack, ' (0.012s)
+18:14:07 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:14:07 | INFO  | Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+18:14:15 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:14:15 | INFO  | ✅ RESPUESTA GENERADA | 10.3s | 1108 chars
+18:14:15 | INFO  | ============================================================
+
+18:14:52 | INFO  | ============================================================
+18:14:52 | INFO  | 📩 NUEVA PETICIÓN | sesión=chat_2566e90a
+18:14:52 | INFO  |    Prompt: ¿Por qué me recomiendas el Elebase y no el Stellar Labs si toco en directo?
+18:14:52 | INFO  | ============================================================
+18:14:53 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:14:53 | INFO  | 🔧 TOOL CALL: search_items_by_keyword(keyword='jack cable', max_results=4)
+18:14:53 | INFO  |   ✅ 2 resultados para 'jack cable': ['B008I5QVB6', 'B08Q7HQHNX'] (0.011s)
+18:14:53 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:14:53 | INFO  | Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+18:15:00 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:15:00 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B008I5QVB6')
+18:15:00 | INFO  | 🔧 TOOL CALL: get_item_details(item_id='B08Q7HQHNX')
+18:15:00 | INFO  |   ✅ Item encontrado: 'Stellar Labs Cable, 3Pos XLR Plug-Jack, ' (0.007s)
+18:15:00 | INFO  |   ✅ Item encontrado: 'Elebase 1/4 Inch TRS Instrument Cable 10' (0.014s)
+18:15:00 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+18:15:00 | INFO  | Retrying request to /openai/v1/chat/completions in 25.000000 seconds
+18:15:28 | INFO  | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+18:15:28 | INFO  | ✅ RESPUESTA GENERADA | 35.6s | 1929 chars
+18:15:28 | INFO  | ============================================================
+

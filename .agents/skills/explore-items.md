@@ -6,30 +6,29 @@ description: Explores the product catalog efficiently using targeted tools to av
 # Explore Items Skill
 
 ## Purpose
-Obtener información del catálogo de productos de forma **eficiente y escalable**, sin cargar todos los datos en el contexto del LLM de una vez.
+Obtener información del catálogo de productos de forma **eficiente y escalable**, sin sobrecargar la ventana de contexto ni agotar la tasa de peticiones (rate limit).
 
-## El Problema que Resuelve
-Los LLMs tienen una ventana de contexto limitada. Si cargamos todo el catálogo de golpe, se consume espacio valioso. En su lugar, este skill define un flujo de exploración progresiva.
+## Reglas Críticas de Exploración
+1. **Evita la sobre-búsqueda (Spam de sinónimos):**
+   - Usa como máximo **1 o 2 keywords** por consulta (ej: si buscas "auriculares", busca "headphone" una sola vez). No hagas búsquedas repetidas con sinónimos (headphone, earphone, headset, earbuds) en la misma interacción.
+2. **Verifica siempre antes de concluir o descartar:**
+   - Si `search_items_by_keyword()` te devuelve candidatos, **llama a `get_item_details(item_id)` para los 2-3 más prometedores** para ver qué son exactamente.
+   - Si tras verificar ves que ningún producto coincide con lo que el usuario pide (o el catálogo no tiene esa categoría), **admítelo con claridad**: explica qué productos relacionados hay en el catálogo y NUNCA te inventes modelos externos.
+3. **Catálogo cerrado:**
+   - Todo producto que recomiendes con precio y ficha técnica DEBE provenir de las herramientas (`db_items.json`). Jamás menciones modelos externos inventados como sugerencias de compra directas.
 
 ## Herramientas Disponibles
 
 | Herramienta | Cuándo usarla | Datos que devuelve |
 |---|---|---|
-| `list_item_titles()` | **Primero siempre** | Solo ID + título + precio de todos los productos (ligero) |
-| `search_items_by_keyword(keyword)` | Para buscar por categoría o necesidad | IDs + títulos de los productos que coincidan |
-| `get_item_details(item_id)` | Cuando ya sabes qué producto quieres analizar | Especificaciones completas de UN producto |
+| `search_items_by_keyword(keyword)` | Para buscar por categoría o necesidad | IDs + títulos de los productos coincidentes |
+| `get_item_details(item_id)` | Para inspeccionar especificaciones técnicas reales | Título, precio, features y descripción de UN producto |
+| `list_item_titles()` | Solo para exploración panorámica inicial cuando no hay palabra clave | Muestra primeros 15 títulos del catálogo |
 
 ## Workflow Recomendado
-
-1. **Llama a `list_item_titles()`** para ver qué productos hay disponibles (índice ligero).
-2. **Llama a `search_items_by_keyword(keyword)`** si buscas algo concreto (ej: "piano", "headphones").
-3. **Llama a `get_item_details(item_id)`** solo para los productos candidatos que quieras analizar en profundidad.
-4. Combina esa información con el historial del usuario para hacer la recomendación.
-
-## Ejemplo de Flujo
-```
-list_item_titles() → ve que hay auriculares, pianos, cables...
-search_items_by_keyword("headphones") → encuentra 2 auriculares relevantes
-get_item_details("B001234") → lee especificaciones completas del auricular candidato
-→ Recomienda ese auricular justificando con los datos técnicos
-```
+1. Identifica qué busca el usuario o qué se desprende de su historial.
+2. Haz **UNA única búsqueda concisa** con `search_items_by_keyword(keyword)`.
+3. Revisa los resultados devueltos:
+   - Si hay candidatos: llama a `get_item_details(item_id)` de los 2 más relevantes.
+   - Si no hay coincidencias: informa al usuario de qué categorías/alternativas existen en el catálogo en base a lo que sabes.
+4. Genera la respuesta sin inventar productos.
